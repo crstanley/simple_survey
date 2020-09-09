@@ -1,0 +1,165 @@
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+#name {
+	font-family: "Lato", sans-serif;
+	font-size: 15px;
+	width: 300px;
+	height: 30px;
+}
+#survey-form {
+	padding: 0 0 0 60px;
+}
+#email {
+	font-family: "Lato", sans-serif;
+	font-size: 15px;
+	width: 300px;
+	height: 30px;
+}
+#number {
+	font-family: "Lato", sans-serif;
+	font-size: 15px;
+	width: 150px;
+	height: 30px;
+}
+.system {
+	font-size: 16px;
+}
+#dropdown {
+	font-family: "Lato", sans-serif;
+	font-size: 15px;
+	font-family: "Lato", sans-serif;
+	width: 400px;
+	height: 30px;
+}
+#dropdown2 {
+	font-size: 15px;
+	font-family: "Lato", sans-serif;
+	width: 400px;
+	height: 30px;
+}
+#main {
+	background: url("https://wallpaperaccess.com/full/264293.jpg");
+	height: 1000px;
+}
+#body {
+	position: relative;
+	top: 60px;
+	margin: auto;
+	width: 600px;
+	height: 850px;
+	background: white;
+	opacity: 80%;
+	padding: 20px 20px 20px 20px;
+	border-radius: 20px 20px 20px 20px;
+	font-family: "Lato", sans-serif;
+}
+#title {
+	text-align: center;
+	position: relative;
+	margin: auto;
+	align-text: center;
+	font-family: "Squada One", cursive;
+	font-size: 34px;
+}
+.center {
+	text-align: center;
+}
+#textarea {
+	width: 200px;
+	height: 40px;
+	font-family: "Lato", sans-serif;
+	text-align: center;
+}
+.comment {
+	width: 80%;
+	height: 50px;
+	opacity: 100%;
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+}
+#submit {
+	background-color: #000;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 25px 150px;
+	cursor: pointer;
+}
+.center {
+	margin: auto;
+}
+</style>
+
+<main id=main>
+	<div id=body>
+		<header id="title">
+			Gaming Genre Survery Form </header>
+
+		<p id="decription" class="center"> Thank you for completing my survey </p>
+
+		<form id="survey-form">
+
+			<div>
+				<label id="name-label"></label><br>
+				<input type="text" id="name" value="Name" required></input></div>
+
+			<div>
+				<label id="email-label"></label><br>
+				<input type="text" id="email" value="Email" required> </input></div>
+
+			<div>
+				<label id="number-label"> </label><br>Age: <input type="number" id="number" value="18" min="0" max="200" required></input></div>
+			<br>
+			<div>
+				<label for="hours"></label><br>
+				<select name="playhours" id="dropdown">
+					<option value="">How many hours do you play per week?</option>
+					<option value="0-5">0-5</option>
+					<option value="5-10">5-10</option>
+					<option value="10-20">10-20</option>
+					<option value="20-30">20-30</option>
+					<option value="30-40">30-40</option>
+					<option value="40+">40+</option>
+				</select></div>
+			<br>
+
+			<div class="system"><label for="console" id="console-label">What do you mostly play on?</label><br>
+				<label for="playstation"><input id="playstation" type="radio" checked="checked" name="console" value="Playstation">Playstation </label><br>
+				<label for="xbox"><input id="xbox" type="radio" name="console" value="xbox">Xbox </label><br>
+				<label for="pc"><input id="pc" type="radio" name="console" value="pc">PC/Steam </label><br>
+				<label for="nintendo"><input id="nintendo" type="radio" name="console" value="nintendo">Nintendo </label></div>
+
+			<div class="system"><label for="level"></label><br>
+				<select name="level" id="dropdown2">
+					<option value="">How would you describe your interest in video games?</option>
+					<option value="noob">Total Noob</option>
+					<option value="casual">Filthy Casual</option>
+					<option value="interested">I read game news or subscribe to gaming magazines</option>
+					<option value="dedicated">I have attended a con, opening, or esports event</option>
+					<option value="pro">I have competed in esports or professional gaming</option>
+				</select></div>
+			<br>
+
+			<div><label for="genre" id="genre-label">Which game franchises have you played <em> and </em> would recommend to others?</label><br>
+				<label for="AssassinCreed"><input id="creed" type="checkbox" + checked="checked" value="creed">Assassin's Creed </label><br>
+				<label for="Fallout"><input id="fallout" type="checkbox" value="fallout">Fallout</label><br>
+				<label for="cod"><input id="cod" type="checkbox" value="cod">Call of Duty</label><br>
+				<label for="MassEffect"><input id="mass" type="checkbox" value="mass">Mass Effect</label><br>
+				<label for="madden"><input id="madden" type="checkbox" value="madden">Madden</label><br>
+				<label for="scrolls"><input id="scrolls" type="checkbox" value="scrolls">Elder Scrolls</label><br>
+				<label for="Bioshock"><input id="bioshock" type="checkbox" value="bioshock">Bioshock</label><br>
+				<label for="zelda"><input id="zelda" type="checkbox" value="zelda">The Legend of Zelda</label><br>
+				<label for="tonyhawk"><input id="tonyhawk" type="checkbox" value="tonyhawk">Tony Hawk</label></div><br>
+			<div>
+				<form action="/form/submit" method="POST">
+					<textarea class="comment">Tell us more about your gaming preferences or thoughts on this survey!</textarea>
+			</div>
+
+			<div><button id="submit" type="submit">Submit!</button></div>
+			<br>
+		</form>
+	</div>
+</main>
